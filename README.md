@@ -25,9 +25,6 @@ The rules:
 If you'd prefer for the potty permission game to remain a mystery, don't read this! This section reveals exactly how it works, and will mean you can figure out when and how you'll be allowed to pee.
 
 ### The Dice Game
-=======
-
-### The Dice Game
 Omo Trainer decides potty permission based on a simple dice game: if your dice roll higher than your current desperation rating, you are allowed to go pee. Omo Trainer uses its estimate of your current bladder contents and average bladder capacity to calculate your desperation.
 
 The elegant thing about this game is that the higher your desperation, the lower the chance you will be allowed to pee. That means being denied permission once increases the chance that you will be denied permission again. Most of the time if you ask permission when you first need to go, you will be allowed to pee, but occasionally you will be forced to hold it to the point where an accident is a real possibility.

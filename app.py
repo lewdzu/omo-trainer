@@ -27,7 +27,7 @@ class App(object):
         except tk.TclError:
             # If the icon is missing, just go on with the default icon
             pass
-
+      
         self.drinker = omo.Drinker()
 
         self.load_data()
@@ -92,7 +92,7 @@ class App(object):
 
         self.pee_button = ttk.Button(self.buttonFrame, text="Go pee.", command=self.pee)
         self.pee_button.grid(column=2, row=0, sticky=(tk.W))
-        # self.pee_button.state(['disabled'])
+        self.pee_button.state(['disabled'])
 
         # Accident
         self.accident_button = ttk.Button(self.buttonFrame, text="I can't hold it!", command=self.accident)
@@ -164,16 +164,16 @@ class App(object):
         self.insert_trainer_text(self.trainer.get_permission_message(self.drinker, canGo))
         if(canGo):
             pass
-            # self.pee_button.state(['!disabled'])
+            self.pee_button.state(['!disabled'])
         else:
             pass
-            # self.pee_button.state(['disabled'])
-        # self.permission_button.state(['disabled'])
+            self.pee_button.state(['disabled'])
+        self.permission_button.state(['disabled'])
 
     def pee(self):
         self.drinker.add_release(now(), True)
         self.insert_trainer_text(self.trainer.get_go_pee_message(self.drinker))
-        # self.pee_button.state(['disabled'])
+        self.pee_button.state(['disabled'])
 
     def poll(self):
         t = now()
@@ -191,7 +191,7 @@ class App(object):
             self.eta_text.set("")
         if self.permission_button.instate(['disabled']) and self.drinker.roll_allowed(t):
             self.permission_button.state(['!disabled'])
-            # self.pee_button.state(['disabled'])
+            self.pee_button.state(['disabled'])
         self.root.after(500, self.poll)
 
     def on_name_changed(self, *args):
